@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Legend | Ayobami Adetayo Ajetunmobi</title>
+  <meta
+    name="description"
+    content="The personal world of Legend — music, trading, discipline, and intentional living."
+  />
+  <meta
+    name="keywords"
+    content="Legend, Ayobami Adetayo Ajetunmobi, music, trading, artist, trader, personal brand, luxury website, intentional living"
+  />
+  <meta name="author" content="Ayobami Adetayo Ajetunmobi" />
+  <meta name="theme-color" content="#070707" />
+
+  <meta property="og:title" content="Legend | Ayobami Adetayo Ajetunmobi" />
+  <meta
+    property="og:description"
+    content="The personal world of Legend — music, trading, discipline, and intentional living."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://legendonthisone.com/legend.jpg" />
+  <meta property="og:url" content="https://legendonthisone.com/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Legend | Ayobami Adetayo Ajetunmobi" />
+  <meta
+    name="twitter:description"
+    content="The personal world of Legend — music, trading, discipline, and intentional living."
+  />
+  <meta name="twitter:image" content="https://legendonthisone.com/legend.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #070707;
+      --bg-soft: #0d0d0d;
+      --panel: rgba(255, 255, 255, 0.04);
+      --text: #f5f1e8;
+      --muted: #b9b2a5;
+      --line: rgba(255, 255, 255, 0.09);
+      --accent: #d4af37;
+      --accent-soft: #e7cb72;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
+      --shadow-strong: 0 24px 70px rgba(0, 0, 0, 0.55);
+      --radius: 24px;
+      --max: 1160px;
+      --nav-h: 78px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(212, 175, 55, 0.11), transparent 26%),
+        radial-gradient(circle at top right, rgba(212, 175, 55, 0.07), transparent 20%),
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.025), transparent 30%),
+        linear-gradient(180deg, #060606 0%, #080808 28%, #070707 100%);
+      line-height: 1.72;
+      letter-spacing: 0.01em;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.05;
+      background-image: radial-gradient(rgba(255,255,255,0.08) 0.6px, transparent 0.6px);
+      background-size: 8px 8px;
+      mix-blend-mode: soft-light;
+      z-index: 0;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .nav-inner {
+      min-height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(212, 175, 55, 0.34);
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+      color: var(--accent);
+      box-shadow:
+        inset 0 0 22px rgba(212,175,55,0.08),
+        0 0 26px rgba(212,175,55,0.06);
+      font-size: 0.94rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      position: relative;
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0%;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,0.28);
+      background: rgba(212,175,55,0.08);
+      color: var(--accent-soft);
+      font-weight: 600;
+      transition: all 0.25s ease;
+    }
+
+    .nav-cta:hover,
+    .nav-cta:focus-visible {
+      background: rgba(212,175,55,0.14);
+      border-color: rgba(212,175,55,0.45);
+      transform: translateY(-1px);
+    }
+
+    main,
+    footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      position: relative;
+      padding: 120px 0;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: calc(var(--nav-h) + 20px);
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 88px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0.7;
+    }
+
+    .hero {
+      min-height: calc(100vh - var(--nav-h));
+      display: flex;
+      align-items: center;
+      padding: 72px 0 56px;
+      border-top: none;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    .hero::before {
+      display: none;
+    }
+
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,0.24);
+      background: rgba(212,175,55,0.06);
+      color: var(--accent-soft);
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      box-shadow: inset 0 0 18px rgba(212,175,55,0.06);
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 16px rgba(212,175,55,0.65);
+    }
+
+    .hero-title {
+      margin: 18px 0 18px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.045em;
+      max-width: 9ch;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+      text-shadow: 0 0 20px rgba(212,175,55,0.4);
+    }
+
+    .hero-text p {
+      max-width: 660px;
+      margin: 0 0 30px;
+      font-size: clamp(1.02rem, 2.2vw, 1.16rem);
+      color: var(--muted);
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(212,175,55,0.2);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+      color: #17140b;
+      box-shadow: 0 14px 35px rgba(212,175,55,0.24);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.025);
+      color: var(--text);
+      border-color: rgba(255,255,255,0.13);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+      border-color: rgba(212,175,55,0.35);
+      color: var(--accent-soft);
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .hero-meta span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      border-radius: 36px;
+      background: radial-gradient(circle, rgba(212,175,55,0.18), transparent 68%);
+      filter: blur(30px);
+      opacity: 0.9;
+      z-index: 0;
+    }
+
+    .hero-frame {
+      position: relative;
+      z-index: 1;
+      padding: 12px;
+      border-radius: 32px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border: 1px solid rgba(212,175,55,0.18);
+      box-shadow: var(--shadow-strong);
+      overflow: hidden;
+    }
+
+    .hero-frame img {
+      width: 100%;
+      min-height: 560px;
+      object-fit: cover;
+      border-radius: 24px;
+      transition: transform 0.45s ease;
+      filter: grayscale(100%) contrast(1.1);
+      opacity: 0.92;
+    }
+
+    .hero-frame:hover img {
+      transform: scale(1.025);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .glass-stat {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(7,7,7,0.48);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+    }
+
+    .glass-stat strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--accent-soft);
+      font-size: 1rem;
+    }
+
+    .glass-stat span {
+      display: block;
+      color: #d3c9b7;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--accent-soft);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .section-head h2 {
+      margin: 0 0 10px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+    }
+
+    .section-head h2 span {
+      color: var(--accent);
+      text-shadow: 0 0 18px rgba(212,175,55,0.22);
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 690px;
+    }
+
+    .grid-2,
+    .music-grid,
+    .trading-grid,
+    .contact-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .music-grid,
+    .trading-grid { grid-template-columns: 1.15fr 0.85fr; align-items: start; }
+    .contact-grid { grid-template-columns: 1.05fr 0.95fr; align-items: start; }
+
+    .card,
+    .panel {
+      position: relative;
+      padding: 30px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.025));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      overflow: hidden;
+    }
+
+    .card::after,
+    .panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: inherit;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.045);
+    }
+
+    .card:hover,
+    .panel:hover {
+      border-color: rgba(212,175,55,0.25);
+    }
+
+    .card h3,
+    .panel h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.18rem;
+    }
+
+    .card p,
+    .panel p,
+    .card li,
+    .panel li {
+      color: var(--muted);
+    }
+
+    .manifesto-list,
+    .focus-list,
+    .contact-list,
+    .enquiry-list,
+    .platform-list {
+      display: grid;
+      gap: 14px;
+      padding: 0;
+      margin: 18px 0 0;
+      list-style: none;
+    }
+
+    .manifesto-list li,
+    .focus-item,
+    .platform-item,
+    .contact-link,
+    .enquiry-item {
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .focus-item,
+    .platform-item,
+    .contact-link,
+    .enquiry-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      transition: all 0.25s ease;
+    }
+
+    .platform-item:hover,
+    .contact-link:hover,
+    .enquiry-item:hover,
+    .focus-item:hover {
+      transform: translateY(-2px);
+      border-color: rgba(212,175,55,0.34);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.24);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .manifesto-list strong,
+    .focus-item strong,
+    .platform-item strong,
+    .contact-link strong,
+    .enquiry-item strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .focus-item span,
+    .platform-item small,
+    .contact-link span,
+    .enquiry-item span {
+      color: var(--muted);
+      display: block;
+      line-height: 1.5;
+    }
+
+    .badge {
+      flex-shrink: 0;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      color: var(--accent-soft);
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.16);
+      white-space: nowrap;
+    }
+
+    .video-shell {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 16px 44px rgba(0,0,0,0.35);
+      margin-top: 18px;
+    }
+
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .trading-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .metric {
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.025);
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--accent-soft);
+      font-size: 1.12rem;
+      margin-bottom: 6px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .social-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.025);
+      color: var(--muted);
+      transition: all 0.25s ease;
+    }
+
+    .social-pill:hover {
+      color: var(--text);
+      border-color: rgba(212,175,55,0.3);
+      transform: translateY(-1px);
+    }
+
+    .footer {
+      padding: 34px 0 48px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+      will-change: transform, opacity;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal,
+      .btn,
+      .platform-item,
+      .contact-link,
+      .enquiry-item,
+      .focus-item,
+      .hero-frame img {
+        transition: none !important;
+        transform: none !important;
+      }
+      .hero { animation: none !important; }
+      .reveal { opacity: 1 !important; }
+    }
+
+    @media (max-width: 980px) {
+      .hero-wrap,
+      .music-grid,
+      .trading-grid,
+      .contact-grid,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-title {
+        max-width: none;
+      }
+
+      .hero-frame img {
+        min-height: 420px;
+      }
+
+      .hero-overlay {
+        grid-template-columns: 1fr;
+      }
+
+      .trading-metrics {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root { --nav-h: 72px; }
+
+      .container {
+        width: min(var(--max), calc(100% - 28px));
+      }
+
+      section {
+        padding: 84px 0;
+      }
+
+      .nav-inner {
+        min-height: auto;
+        padding: 14px 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 14px 18px;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero {
+        padding: 42px 0 24px;
+      }
+
+      .hero-title {
+        margin-top: 16px;
+        font-size: 2.95rem;
+        line-height: 0.96;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+
+      .cta-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-frame {
+        padding: 10px;
+        border-radius: 24px;
+      }
+
+      .hero-frame img {
+        min-height: 300px;
+        max-height: 520px;
+        border-radius: 18px;
+      }
+
+      .hero-overlay {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+      }
+
+      .glass-stat,
+      .metric {
+        padding: 14px;
+      }
+
+      .section-head {
+        margin-bottom: 24px;
+      }
+
+      .section-head h2 {
+        font-size: 2.2rem;
+      }
+
+      .card,
+      .panel {
+        padding: 22px 18px;
+        border-radius: 20px;
+      }
+
+      .platform-item,
+      .contact-link,
+      .enquiry-item,
+      .focus-item {
+        padding: 15px 14px;
+        border-radius: 16px;
+      }
+
+      .social-pill {
+        width: 100%;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title { font-size: 2.45rem; }
+      .eyebrow {
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+      }
+      .nav-links { font-size: 0.9rem; }
+    }
+.hero-wrap {
+  grid-template-columns: 1.18fr 0.82fr;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.95;
+}
+
+.hero-visual {
+  padding-top: 18px;
+}
+
+.hero-frame img {
+  filter: grayscale(100%) contrast(1.08) brightness(0.94);
+  opacity: 0.95;
+}
+
+.nav-cta {
+  min-height: 42px;
+  padding: 0 16px;
+  font-size: 0.95rem;
+}
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ayobami Adetayo Ajetunmobi",
+      "alternateName": "Legend",
+      "url": "https://legendonthisone.com/",
+      "image": "https://legendonthisone.com/legend.jpg",
+      "sameAs": [
+        "https://linktr.ee/legendharry",
+        "https://www.instagram.com/legendonthisone",
+        "https://x.com/legendonthisone",
+        "https://www.youtube.com/watch?v=STE1fjh54Vo",
+        "https://music.apple.com/ng/album/unknown-vibers-ep/1617537533",
+        "https://audiomack.com/legendharry/song/flavour"
+      ],
+      "jobTitle": "Artist, Trader, and Creative",
+      "description": "A creator building at the intersection of music, trading, identity, and intentional living."
+    }
+  </script>
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="Legend home">
+        <div class="brand-mark">L</div>
+        <span>Legend</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#trading">Trading</a>
+        <a href="#music">Music</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a
+        class="nav-cta"
+        href="https://wa.me/2347062900009"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Start a Conversation
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-wrap">
+        <div class="hero-text reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Personal Brand • Music • Trading • Presence
+          </div>
+
+          <h1 class="hero-title">
+            Built with<br>
+            <span>intention</span>.<br><br>
+            Meant to be<br>
+            felt.
+          </h1>
+
+          <p>
+            More than sound, this is a reflection of identity, discipline, and growth.
+            Across music and trading, every move, every detail, and every decision is shaped with intention.
+            Welcome to the world of Legend.
+          </p>
+
+          <div class="cta-row">
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/2347062900009"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Start a Conversation
+            </a>
+            <a class="btn btn-secondary" href="#trading">
+              Explore the Practice
+            </a>
+          </div>
+
+          <div class="hero-meta" aria-label="Brand values">
+            <span>Discipline</span>
+            <span>Execution</span>
+            <span>Expression</span>
+            <span>Intentional living</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-frame">
+            <img src="/legend.jpg" alt="Portrait of Legend" loading="eager" />
+            <div class="hero-overlay">
+              <div class="glass-stat">
+                <strong>Vision</strong>
+                <span>Clear identity. Premium direction. Long-term movement.</span>
+              </div>
+              <div class="glass-stat">
+                <strong>Execution</strong>
+                <span>Discipline in the markets. Discipline in the craft.</span>
+              </div>
+              <div class="glass-stat">
+                <strong>Standard</strong>
+                <span>No shortcuts. Just growth, clarity, and consistency.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag">About</span>
+          <h2>Defined by <span>discipline</span>. Built for depth.</h2>
+          <p>
+            I’m Ayobami Adetayo Ajetunmobi, known as Legend. What I create comes from intention,
+            not noise. Not trends. Not pressure. Just clarity, discipline, expression, and the
+            decision to build something real across every part of my life.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card reveal">
+            <h3>The Identity</h3>
+            <p>
+              The journey behind this brand is personal — shaped by experience, refinement,
+              and the discipline to keep evolving. What you see here is not performance.
+              It is presence.
+            </p>
+            <ul class="manifesto-list">
+              <li>
+                <strong>Intentional</strong>
+                Every step is measured. Nothing important is accidental.
+              </li>
+              <li>
+                <strong>Premium</strong>
+                Clean presentation. Strong taste. High standards.
+              </li>
+              <li>
+                <strong>Real</strong>
+                Built to be felt, not just seen.
+              </li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3>The Philosophy</h3>
+            <p>
+              This is bigger than music alone. It is about becoming, growing, and moving
+              through life with intention. Legend is more than a name — it is a standard.
+            </p>
+            <ul class="manifesto-list">
+              <li>
+                <strong>No shortcuts</strong>
+                Consistency matters more than hype.
+              </li>
+              <li>
+                <strong>Growth over ego</strong>
+                Evolve quietly. Move deliberately.
+              </li>
+              <li>
+                <strong>Long-term excellence</strong>
+                Build with the future in mind.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="trading">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag">Trading</span>
+          <h2>Precision. <span>Patience</span>. Execution.</h2>
+          <p>
+            Trading is not separate from the brand — it sharpens it. The same discipline,
+            emotional control, and intentional decision-making that shape the music also shape
+            the way I approach the markets.
+          </p>
+        </div>
+
+        <div class="trading-grid">
+          <article class="panel reveal">
+            <h3>The Trading Mindset</h3>
+            <p>
+              The focus is not hype. It is process. It is structure. It is trusting an edge,
+              managing risk, and showing up with consistency. Trading lives here as a reflection
+              of discipline, not as noise.
+            </p>
+
+            <div class="trading-metrics">
+              <div class="metric">
+                <strong>Discipline</strong>
+                <span>Rules first. Emotion second. Execution always.</span>
+              </div>
+              <div class="metric">
+                <strong>Patience</strong>
+                <span>Wait for the setup. Let the edge do its work.</span>
+              </div>
+              <div class="metric">
+                <strong>Risk Control</strong>
+                <span>Protect capital. Think long term. Stay in the game.</span>
+              </div>
+              <div class="metric">
+                <strong>Consistency</strong>
+                <span>Built through repetition, review, and calm decision-making.</span>
+              </div>
+            </div>
+          </article>
+
+          <aside class="panel reveal">
+            <h3>What Trading Represents</h3>
+            <p>
+              Trading reflects the inner standards behind the brand — clarity under pressure,
+              patience without forcing outcomes, and confidence rooted in preparation.
+            </p>
+
+            <div class="focus-list">
+              <div class="focus-item">
+                <div>
+                  <strong>Execution over emotion</strong>
+                  <span>Follow the plan. Respect the process. Stay objective.</span>
+                </div>
+                <span class="badge">Core</span>
+              </div>
+
+              <div class="focus-item">
+                <div>
+                  <strong>Review and refinement</strong>
+                  <span>Learn, adjust, and improve without losing direction.</span>
+                </div>
+                <span class="badge">Growth</span>
+              </div>
+
+              <div class="focus-item">
+                <div>
+                  <strong>Calm under pressure</strong>
+                  <span>Control the moment instead of letting the moment control you.</span>
+                </div>
+                <span class="badge">Standard</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="music">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag">Music</span>
+          <h2>The <span>sound</span> of Legend</h2>
+          <p>
+            Every sound carries a piece of the story. Not just what was said — but what was felt.
+            Tap in, listen closely, and take what resonates.
+          </p>
+        </div>
+
+        <div class="music-grid">
+          <article class="panel reveal">
+            <h3>Featured Release</h3>
+            <p>
+              A lead visual from the Legend catalog — built for mood, presence, and replay.
+            </p>
+
+            <div class="video-shell">
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/STE1fjh54Vo"
+                  title="Legend featured release"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </article>
+
+          <aside class="panel reveal">
+            <h3>Listen & Follow</h3>
+            <p>
+              Stream, watch, and stay connected across the core platforms.
+            </p>
+
+            <div class="platform-list">
+              <a
+                class="platform-item"
+                href="https://www.youtube.com/watch?v=STE1fjh54Vo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div>
+                  <strong>YouTube</strong>
+                  <small>Watch the latest visual and follow the channel.</small>
+                </div>
+                <span class="badge">Open</span>
+              </a>
+
+              <a
+                class="platform-item"
+                href="https://music.apple.com/ng/album/unknown-vibers-ep/1617537533"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div>
+                  <strong>Apple Music</strong>
+                  <small>Stream releases and explore the catalog.</small>
+                </div>
+                <span class="badge">Open</span>
+              </a>
+
+              <a
+                class="platform-item"
+                href="https://audiomack.com/legendharry/song/flavour"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div>
+                  <strong>Audiomack</strong>
+                  <small>Listen directly and discover more music.</small>
+                </div>
+                <span class="badge">Open</span>
+              </a>
+
+              <a
+                class="platform-item"
+                href="https://linktr.ee/legendharry"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div>
+                  <strong>Linktree</strong>
+                  <small>Access the wider digital presence in one place.</small>
+                </div>
+                <span class="badge">Open</span>
+              </a>
+            </div>
+          </aside>
+        </div>
+
+        <div class="grid-2" style="margin-top: 20px;">
+          <article class="card reveal">
+            <h3>Current Focus</h3>
+            <p>
+              Music that carries feeling, identity, and intention. Every release adds to
+              a body of work built to connect deeply and last beyond the moment.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Creative Direction</h3>
+            <p>
+              Clean visuals. Strong mood. Premium presentation. The goal is not just to be heard,
+              but to leave an impression that feels honest, elevated, and memorable.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <div class="section-head">
+            <span class="tag">Contact</span>
+            <h2>Let the next move be <span>intentional</span>.</h2>
+            <p>
+              For collaborations, creative direction, trading conversations, or meaningful opportunities,
+              reach out through any of the channels below. Keep it simple. Keep it clear.
+              Let’s build something that lasts.
+            </p>
+          </div>
+
+          <div class="contact-list">
+            <a
+              class="contact-link"
+              href="https://wa.me/2347062900009"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <strong>WhatsApp</strong>
+                <span>Start a direct conversation</span>
+              </div>
+              <span class="badge">Chat</span>
+            </a>
+
+            <a class="contact-link" href="mailto:aje.adetayo@gmail.com">
+              <div>
+                <strong>Email</strong>
+                <span>aje.adetayo@gmail.com</span>
+              </div>
+              <span class="badge">Write</span>
+            </a>
+
+            <a
+              class="contact-link"
+              href="https://www.instagram.com/legendonthisone"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <strong>Instagram</strong>
+                <span>Stay connected. See the process.</span>
+              </div>
+              <span class="badge">Open</span>
+            </a>
+
+            <a
+              class="contact-link"
+              href="https://x.com/legendonthisone"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <strong>X</strong>
+                <span>Thoughts, updates, and movement in real time.</span>
+              </div>
+              <span class="badge">Open</span>
+            </a>
+          </div>
+
+          <div class="social-row">
+            <a class="social-pill" href="https://www.youtube.com/watch?v=STE1fjh54Vo" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a class="social-pill" href="https://music.apple.com/ng/album/unknown-vibers-ep/1617537533" target="_blank" rel="noopener noreferrer">Apple Music</a>
+            <a class="social-pill" href="https://audiomack.com/legendharry/song/flavour" target="_blank" rel="noopener noreferrer">Audiomack</a>
+            <a class="social-pill" href="https://linktr.ee/legendharry" target="_blank" rel="noopener noreferrer">Linktree</a>
+          </div>
+        </div>
+
+        <aside class="panel reveal">
+          <h3>Enquiries</h3>
+          <p>
+            Send a message directly. If the vision aligns, we’ll take it further.
+          </p>
+
+          <div class="enquiry-list">
+            <div class="enquiry-item">
+              <div>
+                <strong>Collaborations</strong>
+                <span>Music, creative partnerships, and aligned opportunities.</span>
+              </div>
+              <span class="badge">Open</span>
+            </div>
+
+            <div class="enquiry-item">
+              <div>
+                <strong>Trading conversations</strong>
+                <span>Mindset, process, and disciplined growth in the markets.</span>
+              </div>
+              <span class="badge">Open</span>
+            </div>
+
+            <div class="enquiry-item">
+              <div>
+                <strong>Fastest Response</strong>
+                <span>WhatsApp or email is the best way to reach out directly.</span>
+              </div>
+              <span class="badge">Direct</span>
+            </div>
+
+            <div class="enquiry-item">
+              <div>
+                <strong>Approach</strong>
+                <span>Every interaction is handled with clarity, intention, and respect.</span>
+              </div>
+              <span class="badge">Premium</span>
+            </div>
+          </div>
+
+          <div class="cta-row" style="margin-top: 22px; margin-bottom: 0;">
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/2347062900009"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Start a Conversation
+            </a>
+            <a class="btn btn-secondary" href="mailto:aje.adetayo@gmail.com">
+              Send Message
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Legend</span>
+      <span>Built with intention.</span>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
